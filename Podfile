@@ -6,5 +6,6 @@ target 'Address' do
   #use_frameworks!
 
   pod 'Masonry'
+  pod 'PinYin4Objc'
 
 end

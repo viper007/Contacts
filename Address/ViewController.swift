@@ -11,7 +11,7 @@ class ViewController: UIViewController,UITableViewDataSource {
     
     var tableView : UITableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style:UITableViewStyle.plain)
     
-    var data = [CNContact](){
+    var data = [AddressBookModel](){
         didSet {
             tableView.reloadData()
         }
@@ -44,11 +44,11 @@ class ViewController: UIViewController,UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
             cell = UITableViewCell.init(style: .value1, reuseIdentifier: "cell")
+            cell?.textLabel?.numberOfLines = 0
         }
-        let model : CNContact = data[indexPath.row]
-        cell?.textLabel?.text = model.givenName+"---"+model.familyName
-        let phones : [CNLabeledValue] = model.phoneNumbers
-        cell?.detailTextLabel?.text = (phones.first)?.value.stringValue
+        let model : AddressBookModel = data[indexPath.row]
+        cell?.textLabel?.text = "\(String(describing: model.name))" + "\(model.chinese)"
+        cell?.detailTextLabel?.text = model.phone
         return cell!
     }
     override func didReceiveMemoryWarning() {

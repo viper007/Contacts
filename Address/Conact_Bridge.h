@@ -10,5 +10,6 @@
 #define Conact_Bridge_h
 
 #import <Masonry/Masonry.h>
+#import <PinYin4Objc/PinYin4Objc.h>
 
 #endif /* Conact_Bridge_h */

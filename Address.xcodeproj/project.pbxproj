@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38E8976B1D6A42EC1268B1FC /* libPods-Address.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD717D71686A2909A249835 /* libPods-Address.a */; };
+		F60B82241F7CCB2D0079AF68 /* AddressBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B82231F7CCB2D0079AF68 /* AddressBookModel.swift */; };
 		F695B4961F7BA63F00E432DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695B4951F7BA63F00E432DA /* AppDelegate.swift */; };
 		F695B49B1F7BA63F00E432DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F695B4991F7BA63F00E432DA /* Main.storyboard */; };
 		F695B49D1F7BA63F00E432DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F695B49C1F7BA63F00E432DA /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		3475EC0C1500E6512B7E6CC7 /* Pods-Address.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Address.release.xcconfig"; path = "Pods/Target Support Files/Pods-Address/Pods-Address.release.xcconfig"; sourceTree = "<group>"; };
 		6AD717D71686A2909A249835 /* libPods-Address.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Address.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9E6E5C4B6E370396741B1C /* Pods-Address.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Address.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Address/Pods-Address.debug.xcconfig"; sourceTree = "<group>"; };
+		F60B82231F7CCB2D0079AF68 /* AddressBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookModel.swift; sourceTree = "<group>"; };
 		F695B4921F7BA63F00E432DA /* Address.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Address.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F695B4951F7BA63F00E432DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F695B49A1F7BA63F00E432DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F60B82221F7CCB1F0079AF68 /* AddressBookModel */ = {
+			isa = PBXGroup;
+			children = (
+				F60B82231F7CCB2D0079AF68 /* AddressBookModel.swift */,
+			);
+			path = AddressBookModel;
+			sourceTree = "<group>";
+		};
 		F695B4891F7BA63E00E432DA = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		F695B4941F7BA63F00E432DA /* Address */ = {
 			isa = PBXGroup;
 			children = (
+				F60B82221F7CCB1F0079AF68 /* AddressBookModel */,
 				F695B4AB1F7BA66500E432DA /* Conact_Bridge.h */,
 				F695B4A81F7BA66500E432DA /* ContactManager */,
 				F695B4A71F7BA66500E432DA /* ContactModel.swift */,
@@ -227,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60B82241F7CCB2D0079AF68 /* AddressBookModel.swift in Sources */,
 				F695B4AC1F7BA66500E432DA /* ContactModel.swift in Sources */,
 				F695B4AD1F7BA66500E432DA /* LVContactManager.swift in Sources */,
 				F695B4AE1F7BA66500E432DA /* ViewController.swift in Sources */,
@@ -369,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UB5HH83A4;
 				INFOPLIST_FILE = Address/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvzhenhua.Address;
@@ -385,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7UB5HH83A4;
 				INFOPLIST_FILE = Address/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvzhenhua.Address;

@@ -47,7 +47,7 @@ class ViewController: UIViewController,UITableViewDataSource {
             cell?.textLabel?.numberOfLines = 0
         }
         let model : AddressBookModel = data[indexPath.row]
-        cell?.textLabel?.text = "\(String(describing: model.name))" + "\(model.chinese)"
+        cell?.textLabel?.text = "\(model.name)"+"\(model.chinese)"
         cell?.detailTextLabel?.text = model.phone
         return cell!
     }

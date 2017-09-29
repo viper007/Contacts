@@ -8,12 +8,13 @@
 
 import UIKit
 
+
 class AddressBookModel: NSObject {
     
-    var name : String?
-    var chinese : String?
-    var phone : String?
-    var address : String?
-    var email : String?
+    var name : String = ""
+    var chinese : String = ""
+    var phone : String = ""
+    var address : String = ""
+    var email : String = ""
     
 }

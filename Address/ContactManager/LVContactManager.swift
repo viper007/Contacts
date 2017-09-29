@@ -48,7 +48,7 @@ class LVContactStore {
                 let abModel = AddressBookModel()
                 abModel.name = contact.familyName
                 abModel.chinese = pinyin
-                abModel.phone = contact.phoneNumbers.first?.value.stringValue
+                abModel.phone = (contact.phoneNumbers.first?.value.stringValue)!
                 result.append(abModel)
             }
         } catch let error as NSError {

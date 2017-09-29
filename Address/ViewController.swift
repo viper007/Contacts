@@ -4,7 +4,7 @@
 import UIKit
 import ContactsUI
 
-class ViewController: UIViewController,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     // MARK: - 属性
     fileprivate var store = CNContactStore()
@@ -23,13 +23,15 @@ class ViewController: UIViewController,UITableViewDataSource {
         //这个只是简单的获取联系人
         let result = LVContactStore.sharedInstance.findContacts(with: "bell",findType: .all)
         if result.count > 0 {
+            //
             data = result
         }
     }
-    
+    // MARK: - init UI
     func setupBaseInfo() {
         tableView.backgroundColor = UIColor.gray
         tableView.dataSource = self
+        tableView.delegate = self
         view.addSubview(tableView)
         tableView.mas_makeConstraints { (make) in
             make?.edges.equalTo()(self.view)
@@ -41,21 +43,19 @@ class ViewController: UIViewController,UITableViewDataSource {
         return data.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        if cell == nil {
-            cell = UITableViewCell.init(style: .value1, reuseIdentifier: "cell")
-            cell?.textLabel?.numberOfLines = 0
-        }
+        let cell : ContactCell = ContactCell.cellWith(tableView: tableView)
         let model : AddressBookModel = data[indexPath.row]
-        cell?.textLabel?.text = "\(model.name)"+"\(model.chinese)"
-        cell?.detailTextLabel?.text = model.phone
-        return cell!
+        cell.textLabel?.text = model.name+"---"+"\(model.chinese)"
+        cell.detailTextLabel?.text = model.phone
+        return cell
+    }
+    // MARK: - UITableView Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("\(indexPath.section)"+"---"+"\(indexPath.row)")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
